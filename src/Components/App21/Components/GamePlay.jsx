@@ -85,6 +85,7 @@ const GamePlay = () => {
     message = 'Good luck';
     hideRetryQuit = true;
     hideButtons = false;
+    pauseQuittitle = 'Pause';
     setCount(0);
     setStartQuitgame();
   };
@@ -176,8 +177,8 @@ const GamePlay = () => {
           </button>
           <button
             className="button"
-            hidden={false} // -------------- Pause
-            onClick={pauseHandler}
+            hidden={false} // -------------- Pause/Quit
+            onClick={'Pause' == pauseQuittitle ? pauseHandler : quitHandler}
           >
             {pauseQuittitle}
           </button>
